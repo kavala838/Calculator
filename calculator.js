@@ -12,6 +12,7 @@ function display(id) {
 function cleardisplay(){
     let displayEle = document.getElementById("displayField");
     displayEle.innerHTML="";
+    document.getElementById("ansDisplay").innerHTML="";
 }
 
 function clearOne(){
@@ -29,7 +30,7 @@ function clearOne(){
 function result(){
     let str = document.getElementById("displayField").innerText;
     let ans=getresult(str);
-    document.getElementById("displayField").innerHTML=ans;
+    document.getElementById("ansDisplay").innerHTML=ans;
 }
 
 function getresult(str){
