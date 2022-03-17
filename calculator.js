@@ -6,6 +6,28 @@ function display(id) {
     displayContent = displayEle.innerHTML + displayContent;
 
     displayEle.innerHTML = displayContent;
+
+    result();
+}
+
+
+function displayOperator(id){
+    let displayEle = document.getElementById("displayField");
+    let displayContent=displayEle.innerHTML;
+    let displayoper = document.getElementById(id).innerText;
+    //<!--if(displayEle.innerText!==null)
+    if(displayContent.length===0 && (id==="multiply" || id==="divide")){
+        
+    }
+    else{
+    if(displayContent.length!==0 && (displayContent[displayContent.length-1]==="+" || displayContent[displayContent.length-1]==="-") || displayContent[displayContent.length-1]==="*" || displayContent[displayContent.length-1]==="/"){
+        displayContent=displayContent.substring(0,displayContent.length-1);
+    }
+    displayContent = displayContent + displayoper;
+
+    displayEle.innerHTML = displayContent;
+
+}
 }
 
 
@@ -25,6 +47,7 @@ function clearOne(){
         let newStr=str.substring(0,str.length-1);
         document.getElementById("displayField").innerHTML=newStr;
     }
+    result();
 }
 
 function result(){
@@ -104,6 +127,9 @@ function resultNoB(str){
         str="0"+str;
     }
 
+    if(str[str.length-1]==="+" || str[str.length-1]==="-" || str[str.length-1]==="*" || str[str.length-1]==="/"){
+        str=str.substring(0,str.length-1);
+    }
 
     var arr=new Array();  
 
