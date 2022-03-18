@@ -50,6 +50,12 @@ function clearOne(){
     result();
 }
 
+function displaydot(){
+    let displayEle = document.getElementById("displayField");
+    let content=displayEle.innerHTML+".";
+    displayEle.innerHTML=content;
+}
+
 function result(){
     let str = document.getElementById("displayField").innerText;
     let ans=getresult(str);
@@ -147,6 +153,12 @@ function resultNoB(str){
         while(i<n && str[i]!=="+" && str[i]!=="-" && str[i]!=="*" && str[i]!=="/"){
             s=s+str[i];
             i+=1;
+        }
+        if(s[s.length-1]==="."){
+            s=s+"0";
+        }
+        if(s[0]==="."){
+            s="0"+s;
         }
         arr.push(s);
         if(i<n){
