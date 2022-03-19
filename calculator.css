@@ -1,15 +1,87 @@
 #displayField{
-    height: 15px;
-    width: 150px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
+    height: 25px;
+    width: 160px;
+    border-bottom-style: solid;
+    border-bottom-width: 0px;
+    border-bottom-color: aqua;
+    text-align: right;
 }
 
 #ansDisplay{
-    height: 15px;
-    width: 50px;
+    height: 20px;
+    width: 160px;
+    text-align: right;
+}
+
+.calculator-container{
+    height: 251px;
+    width: 166px;
     border-style: solid;
-    border-width: 2px;
-    border-color: blue;
+    border-width: 3px;
+    border-color :antiquewhite;
+    border-radius: 7px;
+    padding: 0px;
+}
+
+button{
+    height: 40px;
+    width: 40px;
+    margin: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+.noLeft{
+    height: 40px;
+    width: 40px;
+    margin: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    border-left-width: 0px;
+}
+
+.noRight{
+    height: 40px;
+    width: 40px;
+    margin: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    border-right-width: 0px;
+}
+
+
+.noTop{
+    border-top-width: 0px;
+}
+
+
+.noBottom{
+    border-bottom-width: 0px;
+}
+
+.topLeft{
+    border-top-left-radius: 7px;
+}
+
+.topRight{
+    border-top-right-radius: 7px;
+}
+
+.bottomLeft{
+    border-bottom-left-radius: 7px;
+}
+
+.bottomRight{
+    border-bottom-right-radius: 7px;
 }

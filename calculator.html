@@ -3,46 +3,64 @@
         <head>
             <link rel="stylesheet" href="calculator.css">
             <script src="calculator.js"></script>
+
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         </head>
 
         <body>
-            <div class="calculator-container">
-                <div id="displayField">
+            <div class="mt-5"></div>
+            <div class="calculator-container m-auto">
+                <div class="display-body">
+                    <div id="displayField">
 
-                </div>
-                <div id="ansDisplay">
+                    </div>
+                    <div id="ansDisplay">
 
+                    </div>
                 </div>
+
                 <div class="calculator-body">
                     <div>
-                        <button id="1" onclick="display(this.id)">1</button>
-                        <button id="2" onclick="display(this.id)">2</button>
-                        <button id="3" onclick="display(this.id)">3</button>
-                        <button id="plus" onclick="displayOperator(this.id)">+</button>
+                        <button class="noTop noLeft topLeft" id="clear" onclick="cleardisplay()">C</button>
+                        <button class="noTop" id="equal" onclick="result()">E</button>
+                        <button class="noTop" id="<-" onclick="clearOne()"><-</button>
+                        <button class="noTop noRight topRight" id="." onclick="displaydot()">.</button>
+
+                        
+                        
                     </div>
                     <div>
-                        <button id="4" onclick="display(this.id)">4</button>
-                        <button id="5" onclick="display(this.id)">5</button>
-                        <button id="6" onclick="display(this.id)">6</button>
-                        <button id="minus" onclick="displayOperator(this.id)">-</button>
-                    </div>
-                    <div>
-                        <button id="7" onclick="display(this.id)">7</button>
+                        <button class="noLeft" id="7" onclick="display(this.id)">7</button>
                         <button id="8" onclick="display(this.id)">8</button>
                         <button id="9" onclick="display(this.id)">9</button>
-                        <button id="multiply" onclick="displayOperator(this.id)">*</button>
+                        <button class="noRight" id="plus" onclick="displayOperator(this.id)">+</button>
+
+                        
+                        
                     </div>
                     <div>
-                        <button id="0" onclick="display(this.id)">0</button>
-                        <button id="clear" onclick="cleardisplay()">C</button>
-                        <button id="equal" onclick="result()">E</button>
-                        <button id="divide" onclick="displayOperator(this.id)">/</button>
+                        <button class="noLeft" id="4" onclick="display(this.id)">4</button>
+                        <button id="5" onclick="display(this.id)">5</button>
+                        <button id="6" onclick="display(this.id)">6</button>
+                        <button class="noRight" id="minus" onclick="displayOperator(this.id)">-</button>
+
+                        
                     </div>
                     <div>
-                        <button id="(" onclick="display(this.id)">(</button>
-                        <button id=")" onclick="display(this.id)">)</button>
-                        <button id="<-" onclick="clearOne()"><-</button>
-                        <button id="." onclick="displaydot()">.</button>
+                        <button class="noLeft" id="1" onclick="display(this.id)">1</button>
+                        <button id="2" onclick="display(this.id)">2</button>
+                        <button id="3" onclick="display(this.id)">3</button>
+                        <button class="noRight" id="divide" onclick="displayOperator(this.id)">/</button>
+                        
+                    </div>
+                    <div>
+                        <button class="noBottom noLeft bottomLeft" id="(" onclick="display(this.id)">(</button>
+                        <button class="noBottom" id="0" onclick="display(this.id)">0</button>
+                        <button class="noBottom" id=")" onclick="display(this.id)">)</button>
+                        <button class="noBottom noRight bottomRight" id="multiply" onclick="displayOperator(this.id)">*</button>
                     </div>
                 </div>
             </div>

@@ -46,8 +46,9 @@ function clearOne(){
     else{
         let newStr=str.substring(0,str.length-1);
         document.getElementById("displayField").innerHTML=newStr;
+        result();
     }
-    result();
+    
 }
 
 function displaydot(){
