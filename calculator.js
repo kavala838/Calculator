@@ -62,7 +62,10 @@ function displaydot(){
 }
 
 function enter(){
-    display2();
+    let quesele=document.getElementById("displayField");
+    let ansele=document.getElementById("ansDisplay");
+
+    quesele.innerHTML=ansele.innerHTML;
 }
 function result(){
     let str = document.getElementById("displayField").innerText;
@@ -257,21 +260,9 @@ function resultNoB(str){
 
 
 function display1(){
-    let quesele=document.getElementById("displayField");
-    let ansele=document.getElementById("ansDisplay");
-
-    quesele.classList.remove("display1Small");
-    quesele.classList.add("display1Large");
-    ansele.classList.remove("display2Large");
-    ansele.classList.add("display2Small");
+   
 }
 
 function display2(){
-    let ansele=document.getElementById("displayField");
-    let quesele=document.getElementById("ansDisplay");
-
-    quesele.classList.remove("display2Small");
-    quesele.classList.add("display2Large");
-    ansele.classList.remove("display1Large");
-    ansele.classList.add("display1Small");
+    
 }
