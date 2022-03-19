@@ -1,4 +1,5 @@
 function display(id) {
+    display1();
     let displayEle = document.getElementById("displayField");
     let displayContent = document.getElementById(id).innerText;
     //<!--if(displayEle.innerText!==null)
@@ -12,6 +13,7 @@ function display(id) {
 
 
 function displayOperator(id){
+    display1();
     let displayEle = document.getElementById("displayField");
     let displayContent=displayEle.innerHTML;
     let displayoper = document.getElementById(id).innerText;
@@ -32,12 +34,14 @@ function displayOperator(id){
 
 
 function cleardisplay(){
+    display1();
     let displayEle = document.getElementById("displayField");
     displayEle.innerHTML="";
     document.getElementById("ansDisplay").innerHTML="";
 }
 
 function clearOne(){
+    display1();
     let str = document.getElementById("displayField").innerText;
     if(str.length===0){}
     else if(str.length===1){
@@ -57,6 +61,9 @@ function displaydot(){
     displayEle.innerHTML=content;
 }
 
+function enter(){
+    display2();
+}
 function result(){
     let str = document.getElementById("displayField").innerText;
     let ans=getresult(str);
@@ -246,4 +253,25 @@ function resultNoB(str){
     console.log("calculation ended");
     console.log(arr[0]);
     return arr[0];
+}
+
+
+function display1(){
+    let quesele=document.getElementById("displayField");
+    let ansele=document.getElementById("ansDisplay");
+
+    quesele.classList.remove("display1Small");
+    quesele.classList.add("display1Large");
+    ansele.classList.remove("display2Large");
+    ansele.classList.add("display2Small");
+}
+
+function display2(){
+    let ansele=document.getElementById("displayField");
+    let quesele=document.getElementById("ansDisplay");
+
+    quesele.classList.remove("display2Small");
+    quesele.classList.add("display2Large");
+    ansele.classList.remove("display1Large");
+    ansele.classList.add("display1Small");
 }

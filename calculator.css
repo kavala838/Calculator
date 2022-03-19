@@ -1,5 +1,5 @@
 #displayField{
-    height: 25px;
+    height: 30px;
     width: 160px;
     border-bottom-style: solid;
     border-bottom-width: 0px;
@@ -8,13 +8,13 @@
 }
 
 #ansDisplay{
-    height: 20px;
+    height: 30px;
     width: 160px;
     text-align: right;
 }
 
 .calculator-container{
-    height: 251px;
+    height: 261px;
     width: 166px;
     border-style: solid;
     border-width: 3px;
@@ -84,4 +84,20 @@ button{
 
 .bottomRight{
     border-bottom-right-radius: 7px;
+}
+
+.display1Large{
+    font-size: 25px;
+}
+
+.display2Large{
+    font-size: 25px;
+}
+
+.display1Small{
+    font-size: 13px;
+}
+
+.display2Small{
+    font-size: 13px;
 }
